@@ -20,26 +20,6 @@
   "estado": "terminada"
  },
  {
-  "titulo": "una nueva",
-  "descripcion": "con su descripción",
-  "estado": "pendiente"
- },
- {
-  "titulo": "La creé recién",
-  "decripcion": "Descripción",
-  "estado": "pediente"
- },
- {
-  "titulo": "La creé recién",
-  "decripcion": "Descripción",
-  "estado": "pediente"
- },
- {
-  "titulo": "Otra tarea más",
-  "decripcion": "",
-  "estado": "pendiente"
- },
- {
   "titulo": "Más tareas...",
   "decripcion": "Sin descripción",
   "estado": "pendiente"

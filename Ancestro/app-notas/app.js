@@ -8,12 +8,19 @@ let accion = process.argv[2];
 
 
 switch (accion) {
+    case undefined:
     case "todas":
         tareas.forEach(element => {
-           console.log(element.titulo);
+           console.log(element.titulo, "(" + element.estado + ")");
         });
         break;
-      default:
+    case "pendientes" :
+        let tareasFiltradas = tareas.filter(elem => elem.estado == "pendiente"); 
+        tareasFiltradas.forEach(element => {
+            console.log(element.titulo, "(" + element.estado + ")");
+        }); 
+        break; 
+    default:
           console.log();
           console.log("No entiendo esa acción");
 }

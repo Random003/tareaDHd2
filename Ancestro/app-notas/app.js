@@ -81,7 +81,6 @@ switch (accion) {
     // 4. Vamos a guardar los cambios
 
 
-    
     // Micro desafío
     // 1. Atajar el caso de 'borrar'
     // 2. Vamos a recorrer el array de tareas

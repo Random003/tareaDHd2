@@ -20,18 +20,8 @@
   "estado": "terminada"
  },
  {
-  "titulo": "Más tareas...",
-  "decripcion": "Sin descripción",
-  "estado": "pendiente"
- },
- {
   "titulo": "Más tareas!!!...",
   "decripcion": "",
-  "estado": "pendiente"
- },
- {
-  "titulo": "Titulo",
-  "descripcion": "Descripcion que es re larga",
   "estado": "pendiente"
  }
 ]

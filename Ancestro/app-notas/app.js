@@ -1,31 +1,5 @@
-const fs = require ("fs");
+const tareas = require ("./tareas");
 
-function leerArchivoJSON () {
-    const tareasJson = fs. readFileSync ("./tareas.json", "utf-8");
-    return JSON.parse (tareasJson);
-}  
-
-// Microdesafío
-// 1. Crear la funcion escribirArchivoJSON()
-// - La función va a recibir un array
-// - Van a convertir el array a JSON
-// - Usando fs.writeFileSync van a escribir el archivo JSON
-
-function escribirArchivoJSON(tareas) {
-    let tareasJson = JSON.stringify(tareas, null, ' ');
-    fs.writeFileSync('./tareas.json', tareasJson);
-}
-
-function todas() {
-    let tareas = leerArchivoJSON();
-    
-    tareas.forEach(element => {
-        console.log(element.titulo, '(' +  element.estado + ')');
-    });
-}
-
-
-let tareas = leerArchivoJSON();
 
 //let parametros = process.argv;  argv tiene los argumentos el primero es el ejecutable de node y el segundo el app.js
 //el [2] es para que tome el ejecutable app.js y le agregue el pad (osea lo que escribo despues de node app.js, osea node app.js pendientes)
@@ -36,15 +10,10 @@ let parametros = process.argv.slice(3);
 switch (accion) {
     case undefined:
     case "todas":
-         tareas.forEach(element => {
-           console.log(element.titulo, "(" + element.estado + ")");
-        });
+         tareas.todas()
         break;
-    case "pendientes" :
-        let tareasFiltradas = tareas.filter(elem => elem.estado == "pendiente"); 
-        tareasFiltradas.forEach(element => {
-            console.log(element.titulo, "(" + element.estado + ")");
-        }); 
+    case "pendientes":
+        
         break; 
 
         // Microdesafío
@@ -68,6 +37,9 @@ switch (accion) {
 
        escribirArchivoJSON(tareas);
        
+      console.log("Tarea creada con éxito!");
+      
+
     break 
     
 
@@ -89,6 +61,23 @@ switch (accion) {
     // 4. Vamos a guardar los cambios
 
 
+    case "borrar":
+        let tareasActualizadas = tareas.filter (
+            function(tarea) {
+                return parametros[0] !== tarea.titulo;
+            }
+        );
+
+            
+         if (tareas.length !== tareasActualizadas.length) {
+                escribirArchivoJSON(tareasActualizadas);
+                console.log("Tarea Borrada Viejita!!");
+         } else {
+                console.log("No esta la tarea, pero si el potrillo!");
+            }
+            
+
+        break
 
       //default ataja cualquier otro caso (similar al "else" que usamos en el "if")
     default:

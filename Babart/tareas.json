@@ -5,18 +5,13 @@
   "estado": "pendiente"
  },
  {
-  "titulo": "Practicar el for",
-  "descripcion": "Entender cómo se usa",
-  "estado": "en progreso"
- },
- {
   "titulo": "Objeto literal vs JSON",
   "descripcion": "¿Qué tienen de diferente?",
   "estado": "terminada"
  },
  {
-  "titulo": "Refactorear con un forEach()",
-  "descripcion": "Magic magic magic",
+  "titulo": "la cree recien",
+  "descripcion": "descripcion",
   "estado": "terminada"
  }
 ]

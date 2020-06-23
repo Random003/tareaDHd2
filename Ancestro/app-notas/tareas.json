@@ -23,5 +23,15 @@
   "titulo": "Más tareas!!!...",
   "decripcion": "",
   "estado": "pendiente"
+ },
+ {
+  "titulo": "otra tareoooottaa",
+  "descripcion": "Banana con queso",
+  "estado": "pendiente"
+ },
+ {
+  "titulo": "otra tareita",
+  "descripcion": "Sin Descripción",
+  "estado": "pendiente"
  }
 ]

@@ -23,13 +23,16 @@ switch (accion) {
         
     case "crear" :
         tareas.crear(parametros[0], parametros[1]) 
-    break 
+         break;
     
 
     case "borrar":
         tareas.borrar(parametros[0])
-        break
+        break;
 
+    case "modificar":
+        tareas.modificar();
+        break;   
 
       //default ataja cualquier otro caso (similar al "else" que usamos en el "if")
     default:

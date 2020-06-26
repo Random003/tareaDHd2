@@ -84,7 +84,6 @@ function crear(titulo = "", descripcion = "", estado = "pendiente") {
 }
   
 
-
     // Micro desafío
     // 1. Atajar el caso de 'completar'
     // 2. Vamos a recorrer el array de tareas
@@ -93,8 +92,13 @@ function crear(titulo = "", descripcion = "", estado = "pendiente") {
     // 3. Vamos a modificar la tarea que corresponda
     // 4. Vamos a guardar los cambios
 
-    //  function completar ()
-
+    
+    function modificar() { tareas.map (function(element) { if
+        (element.Titulo === parametros [0]) {element.Estado = parametros[1],
+            console.log(chalk.bgCyanBright.underline("Tarea modificada"))}
+           
+            escribirArchivoJSON(tareas);
+              })};
 
 
     // Micro desafío
@@ -128,5 +132,7 @@ module.exports = {
     todas, // todas : todas,
     pendientes, // pendientes : pendientes
     crear,
+    modificar,
     borrar,
+    
 }

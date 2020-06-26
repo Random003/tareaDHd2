@@ -33,7 +33,13 @@ function todas() {
 // - Si llega el estado lista solo las de ese estado
 // - Si no llega el estado, lista todas
 
-// function listar ()
+function listar() {
+    let tareas = leerArchivoJSON();
+    
+    tareas.forEach(tarea => {
+        console.log(tarea.titulo, '(' +  tarea.estado + ')');
+    });
+}
 
 
 
@@ -130,6 +136,7 @@ function crear(titulo = "", descripcion = "", estado = "pendiente") {
 
 module.exports = {
     todas, // todas : todas,
+    listar,
     pendientes, // pendientes : pendientes
     crear,
     modificar,

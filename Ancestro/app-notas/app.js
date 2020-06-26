@@ -34,6 +34,10 @@ switch (accion) {
         tareas.modificar();
         break;   
 
+    case 'listar':
+        tareas.listar();
+        break;    
+
       //default ataja cualquier otro caso (similar al "else" que usamos en el "if")
     default:
           console.log();
